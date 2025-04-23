@@ -46,12 +46,13 @@ class CourseUnitContainerAdapter(
                 createDiscussionFragment(block)
             }
 
-            isSupportedHtmlBlock(block) -> {
+            /*isSupportedHtmlBlock(block) -> {
                 createHtmlUnitFragment(block, downloadedModel, noNetwork, offlineUrl)
-            }
+            }*/
 
             else -> {
-                createNotAvailableUnitFragment(block, NotAvailableUnitType.MOBILE_UNSUPPORTED)
+                createHtmlUnitFragment(block, downloadedModel, noNetwork, offlineUrl)
+                //createNotAvailableUnitFragment(block, NotAvailableUnitType.MOBILE_UNSUPPORTED)
             }
         }
     }
